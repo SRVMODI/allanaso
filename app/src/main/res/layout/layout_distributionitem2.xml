@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp"
+    android:paddingTop="0dp"
+    android:paddingRight="4dp"
+    android:weightSum="7">
+
+    <ImageButton
+        android:id="@+id/ibExpand"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_10dp"
+        android:layout_below="@+id/et_descr"
+        android:layout_margin="@dimen/dimen_1dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_expand_more_black_18dp"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/et_descr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:background="@android:color/white"
+        android:enabled="false"
+        android:gravity="right"
+        android:hint=""
+        android:paddingRight="6dp"
+        android:singleLine="false"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/et_tgt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:enabled="false"
+            android:gravity="right"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/et_tilldate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:enabled="false"
+            android:gravity="right"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_mtd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:enabled="false"
+        android:gravity="right"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/et_rr_rqd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:enabled="false"
+        android:gravity="right"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+
+</TableRow>

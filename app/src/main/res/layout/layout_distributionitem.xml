@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    android:descendantFocusability="beforeDescendants"
+    android:paddingLeft="4dp"
+    android:paddingTop="2dp"
+    android:paddingRight="4dp">
+
+
+        <ImageButton
+            android:id="@+id/ibExpand"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:background="@android:color/transparent"
+            android:layout_margin="@dimen/dimen_1dp"
+            android:layout_below="@+id/et_descr"
+            android:src="@drawable/baseline_expand_more_black_18dp"/>
+        <TextView
+            android:id="@+id/et_descr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="6dp"
+            android:textSize="10sp"
+            android:hint=""
+            android:textColor="#000000"
+            android:layout_margin="1dp"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/et_tgt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:gravity="right"
+                    android:textSize="11sp"
+                    android:visibility="visible"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/et_tilldate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:gravity="right"
+                    android:textSize="11sp"
+                    android:enabled="false"
+                    android:ellipsize="marquee"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_mtd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="11sp"
+            android:gravity="right"
+            android:textColor="#000000"
+            android:inputType="number"
+            android:enabled="false"
+            android:visibility="visible"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/et_rr_rqd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:gravity="right"
+            android:singleLine="true"
+            android:enabled="false"
+            android:textSize="11sp"
+            android:textColor="#000000"
+            android:inputType="number"
+            android:background="@android:color/white"
+            android:layout_weight="1"/>
+
+
+</LinearLayout>

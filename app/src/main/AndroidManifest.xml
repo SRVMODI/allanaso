@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.astix.allanasosfa">
+
+
+    <!-- GCM Permissions - End here -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="com.astix.allanasosfa.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Permission to access data from network provider -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Permission for receiveing GCM message -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Permission to get the Gmail account(This is required only if you are developing application for lower than android version 4.0) -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"></uses-permission>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <application
+        android:name="com.astix.app"
+        android:allowBackup="true"
+        android:icon="@drawable/applogo_allana"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/applogo_allana"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/StorelistTheme">
+        <uses-library android:name ="org.apache.http.legacy"
+            android:required ="false"/>
+
+        <!--android:networkSecurityConfig="@xml/network_security_config"
+                -->
+        <receiver
+            android:name="com.astix.allanasosfa.BroadcastReceiverOnBootComplete"
+            android:enabled="true"
+
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.astix.allanasosfa.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.astix.allanasosfa.DayStartActivity" />
+
+        <activity android:name="com.astix.allanasosfa.AllButtonActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name="com.astix.allanasosfa.StoreSelection" />
+        <activity android:name="com.astix.allanasosfa.LastVisitDetails" />
+        <activity android:name="com.astix.allanasosfa.LastVisitDetailsSecondPart" />
+
+        <activity
+            android:name="com.astix.allanasosfa.ProductOrderFilterSearch"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.allanasosfa.OrderReview"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.astix.allanasosfa.ReturnActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity
+            android:name="com.astix.allanasosfa.SKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name="com.astix.allanasosfa.SKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.astix.allanasosfa.StoreAndSKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name="com.astix.allanasosfa.StoreAndSKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.astix.allanasosfa.StoreWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+
+        <activity android:name="com.astix.allanasosfa.CheckDatabaseData" />
+        <activity android:name="com.astix.allanasosfa.CheckDatabaseDataOrderBooking" />
+        <activity
+            android:name="com.astix.allanasosfa.TargetVsAchievedActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity android:name="com.astix.allanasosfa.DistributorCheckInFirstActivity" />
+        <activity android:name="com.astix.allanasosfa.DistributorCheckInSecondActivity" />
+
+        <activity android:name="com.example.gcm.NotificationActivity" />
+
+
+        <activity
+            android:name="com.astix.allanasosfa.LauncherActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name="com.astix.allanasosfa.POSMaterialActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.PurchaseOrderWebActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing"></activity>
+
+        <activity android:name=".DialogActivity_Report" android:theme="@style/marketVisitTheme"/>
+        <activity android:name=".WebViewDSRDataReportActivity" />
+        <activity android:name=".WebViewDSRTrackerActivity" />
+
+        <!--
+        <activity
+            android:name=".ProductOrderSearch"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" >
+        </activity>
+        -->
+
+
+        <activity
+            android:name="com.astix.allanasosfa.ProductOrderFilterSearch_RecycleView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.DistributorEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <activity
+            android:name="com.astix.allanasosfa.SyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.InvoiceSyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"></activity>
+        <!--
+        <activity
+            android:name=".My_Summary"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".My_Summary_ByTab"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+
+
+        <activity
+            android:name="com.astix.allanasosfa.StoreWiseSummaryReportMTD"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+
+        <activity
+            android:name="com.astix.allanasosfa.DetailReport_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"></activity>
+        <!--
+        <activity
+            android:name=".Add_New_Store"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".Add_New_Store_NewFormat"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".New_Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <activity
+            android:name="com.astix.allanasosfa.InvoiceStoreSelection"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.InvoiceProductList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--
+        <activity
+            android:name=".WebPageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+
+
+        <!--
+        <service
+            android:name="com.astix.sfatju.Location_Getting_Service"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.astix.sfatju.GetLock"
+            android:label="@string/title_activity_get_lock" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.PicMgr"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_pic_mgr"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name="com.astix.sfatju.MapSunilActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.JSONParser"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="com.astix.sfatju.GPSTrackerService"
+            android:enabled="true" />
+        <service
+            android:name="com.astix.sfatju.FusedTrackerService"
+            android:enabled="true" />
+        -->
+        <!-- Goolge API Key -->
+        <!--
+                <meta-data
+               android:name="com.google.android.maps.v2.API_KEY"
+               android:value="AIzaSyAzpyoQozRjzBR39LcKWhCn8M9Qwp-aNac" />
+        -->
+        <!-- android:value="AIzaSyB-0zXRgQOO6UXY7r5oQEuSp8d1YObPlu4" -->
+        <!-- Debugging key -->
+        <!-- android:value="AIzaSyC6q9cMRezVxHVVXODisV8H9hqjEecH5cM" -->
+        <!-- Releasing key -->
+
+
+        <activity
+            android:name="com.example.gcm.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true"></activity>
+
+        <activity
+            android:name="com.astix.allanasosfa.Add_New_Store_DynamicSectionWise"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <!-- Register Broadcast receiver -->
+
+
+        <receiver
+            android:name="com.example.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Register Service -->
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.astix.allanasosfa.ViewAddedStore"
+            android:label="@string/title_activity_view_added_store"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.StoreSelectionFragment"
+            android:label="Store List"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.AddNewStore_DynamicSectionWise"
+            android:label="@string/title_activity_view_added_store"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.QuotationActivity"
+            android:label="@string/title_activity_quotation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeTab">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.astix.allanasosfa.Delivery_Details_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/detailActivityTheme"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBUuMA_EyjG0VSP-dAyMgGeCG-niwDL8rQ" />
+
+        <service
+            android:name="com.astix.allanasosfa.GeocodeAddressIntentService"
+            android:exported="false" />
+
+        <activity android:name="com.astix.allanasosfa.SalesValueTarget"></activity>
+        <activity android:name="com.astix.allanasosfa.IncentiveActivity"></activity>
+        <activity android:name="com.astix.allanasosfa.DetailReportSummaryActivity"></activity>
+
+
+        <activity
+            android:name="com.astix.allanasosfa.DistributorMapActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.allanasosfa.SyncMasterDistributor"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.astix.allanasosfa.DSR_Registration"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/StorelistTheme">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
+
+        </activity>
+
+        <activity
+            android:name="com.astix.allanasosfa.StoreClosedActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.allanasosfa.reports.ReportsActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.astix.allanasosfa.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.astix.allanasosfa.AddedOutletSummaryReportActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.allanasosfa.DialogDayEndSummaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DayEndDialogTheme" />
+        <activity
+            android:name="com.astix.allanasosfa.CollectionActivityNew"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.allanasosfa.ActualVisitStock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.ProductEntryForm"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.ProductOrderReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.astix.allanasosfa.ProductInvoiceReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="com.astix.allanasosfa.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.WarehouseCheckInFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.WarehouseCheckInSecondActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.astix.allanasosfa.StorelistActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.astix.allanasosfa.MyService"
+            android:enabled="true"
+           />
+
+
+        <activity
+            android:name="com.astix.allanasosfa.printer.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name="com.astix.allanasosfa.StockRequestActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.astix.allanasosfa.DayCollectionReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.DayEndStoreCollectionsChequeReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.StockUnloadEndClosure"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.allanasosfa.collectionReportStoreList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.allanasosfa.CollectionDetailsStoreWise"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.StoreEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.SurveyStoreList"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.SurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.astix.allanasosfa.RemainingStockStatusReport"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.astix.allanasosfa.sync.SyncJobService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f1190ff0cbdbe64db00b2abc4a814062eb1a7aa0" />
+    </application>
+
+</manifest>

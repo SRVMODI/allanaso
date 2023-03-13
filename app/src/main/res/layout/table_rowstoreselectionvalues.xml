@@ -1,0 +1,171 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/storerowselection"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F5F1EF">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="visible"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="#F5F1EF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F1EF"
+            android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+
+>
+<RadioButton
+    android:id="@+id/rg1StoreName"
+    android:textSize="13sp"
+    android:layout_width="wrap_content"
+    android:scrollHorizontally="true"
+    android:singleLine="false"
+    android:layout_weight="3"
+    android:textColor="#000000"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+
+    />
+
+
+        <TextView
+            android:id="@+id/tv_StoreName"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:scrollHorizontally="true"
+            android:singleLine="false"
+            android:layout_weight="3"
+            android:text="abhinav"
+            android:visibility="visible"
+            android:textColor="#000000"
+            android:layout_height="wrap_content" />
+<CheckBox
+android:id="@+id/check1"
+android:checked="false"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:visibility="gone"
+    />
+
+<CheckBox
+android:id="@+id/check2"
+android:checked="false"
+android:layout_height="wrap_content"
+android:layout_width="wrap_content"
+android:visibility="gone"
+    />
+<ImageView
+android:id="@+id/edit_store"
+
+android:layout_height="wrap_content"
+android:layout_width="wrap_content"
+android:visibility="gone"
+android:src="@drawable/edit"
+
+    />
+
+<TextView
+android:id="@+id/tv_LastVisitDate"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+    android:gravity="right"
+android:text="Last Visit Date"
+android:textColor="#000000"
+android:textSize="12dp"
+    android:layout_width="84dp"
+    android:layout_marginRight="12dp"
+    android:layout_weight="1" />
+</LinearLayout>
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+       android:id="@+id/ll_secondaryrow"
+       android:visibility="visible"
+    android:weightSum="4"
+    >
+       <TextView
+          android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="####"
+           android:textColor="#000000"
+           android:visibility="invisible"
+           android:textSize="12dp" />
+       <TextView
+           android:id="@+id/tv_NoOfBrands"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:gravity="center"
+           android:layout_weight="1"
+           android:textColor="#e77c1d"
+           android:textSize="12dp"
+           android:textStyle="bold"/>
+       <TextView
+           android:id="@+id/tv_P3MValue"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:layout_weight="1"
+           android:gravity="center"
+           android:textColor="#e77c1d"
+           android:textSize="12dp"
+           android:textStyle="bold"/>
+       <TextView
+           android:id="@+id/tv_MTDValue"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text=""
+           android:layout_weight="1"
+           android:textColor="#e77c1d"
+           android:textSize="12dp"
+           android:textStyle="bold"/>
+       <TextView
+           android:id="@+id/tv_LastOrderDate"
+           android:layout_width="84dp"
+           android:layout_height="wrap_content"
+           android:gravity="right"
+           android:text="Last Order Date"
+           android:layout_marginRight="12dp"
+           android:layout_weight="1"
+           android:textColor="#105cdd"
+           android:textSize="12dp"/>
+   </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F5F1EF">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="visible"
+        android:background="#E0E0E0" />
+    </LinearLayout>
+
+</LinearLayout>

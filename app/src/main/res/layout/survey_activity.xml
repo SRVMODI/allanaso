@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="#015db4"
+
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText" >
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:visibility="visible"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_back"
+
+
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="@string/Survey"/>
+
+        <ImageView
+            android:id="@+id/logoutIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:src="@drawable/logout30"
+
+
+            android:textSize="15sp" />
+
+        <!-- app:titleTextAppearance using for custom title size -->
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/shadow_with_5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:id="@+id/ll_parentofAll"
+
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tv_quest1"
+            android:textSize="15sp"
+            android:textColor="#1A237E"
+            android:layout_height="wrap_content"
+            android:text="@string/txtFName"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/rb_quest1_yes"
+                android:text="@string/txtMale"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/rb_quest1_no"
+
+                android:layout_marginLeft="10dp"
+                android:text="@string/txtFemale"
+
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tv_quest2"
+            android:textSize="15sp"
+            android:textColor="#1A237E"
+            android:layout_height="wrap_content"
+            android:text="@string/txtFName"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/rb_quest2_yes"
+                android:text="@string/txtMale"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/rb_quest2_no"
+
+                android:layout_marginLeft="10dp"
+                android:text="@string/txtFemale"
+
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tv_quest3"
+            android:textSize="15sp"
+            android:textColor="#1A237E"
+            android:layout_height="wrap_content"
+            android:text="@string/txtFName"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ll_parentOfCheckBox"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tv_quest4"
+            android:textSize="15sp"
+            android:textColor="#1A237E"
+            android:layout_height="wrap_content"
+            android:text="@string/txtFName"/>
+        <EditText
+            android:textSize="15sp"
+            android:id="@+id/et_Comment"
+            android:layout_width="match_parent"
+            android:minHeight="60dp"
+            android:inputType="textCapWords"
+            android:gravity="left"
+            android:textColor="#000"
+            android:hint="type here"
+            android:digits="@string/remarks"
+            android:background="@android:drawable/alert_light_frame"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_submit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/Submit"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_button_nearby"
+        android:layout_height="35dp" />
+
+</LinearLayout>

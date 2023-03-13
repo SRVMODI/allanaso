@@ -1,0 +1,8 @@
+<resources>
+    <!--<string name="app_name">Parassfa</string>-->
+    <string name="app_name">Sancus SO</string>
+    <string name="oks">Ok</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="device_time_incorrect">Your device time is not correct. Would you like to correct it now?</string>
+</resources>

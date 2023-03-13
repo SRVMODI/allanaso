@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "57455765645",
+    "firebase_url": "https://rsplapp-df172.firebaseio.com",
+    "project_id": "rsplapp-df172",
+    "storage_bucket": "rsplapp-df172.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57455765645:android:f1544aa4c98c7fbd",
+        "android_client_info": {
+          "package_name": "project.astix.com.rspl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57455765645-50246hbqac2fpprd7gksksnm6qhrnb3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqOtfE2nPuAf9krBBf4Ut1zhF6O0vIxrc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
